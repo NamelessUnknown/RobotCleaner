@@ -40,11 +40,6 @@
                 }
             }
 
-            foreach (var coords in cleanedSurfaces)
-            {
-                Console.WriteLine("X coordinates: " + coords.X + " Y coordinates: " + coords.Y);
-            }
-
             var distinctAreas = cleanedSurfaces.GroupBy(area => new { area.X, area.Y }).Select(g => g.First()).Count();
 
             Console.WriteLine($"=> Cleaned: {distinctAreas}");
